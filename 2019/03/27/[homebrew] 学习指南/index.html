@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 刘佳勋的博客</title>
+  <title>刘佳勋的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
+  <meta name="description" content="编写目的homebrew是macOS缺失的软件包的管理器，是一款自由及及开放源代码的软件包管理系统，用以简化macOS系统上的软件安装过程。 安装1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 基本命令 list 列表展示所有已">
 <meta name="keywords" content="Java,Golang,Spring boot,Spring cloud,Linux,Docker,Mysql,Developer,Coder">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="刘佳勋的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/[homebrew] 学习指南/index.html">
 <meta property="og:site_name" content="刘佳勋的博客">
-<meta property="og:description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
+<meta property="og:description" content="编写目的homebrew是macOS缺失的软件包的管理器，是一款自由及及开放源代码的软件包管理系统，用以简化macOS系统上的软件安装过程。 安装1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 基本命令 list 列表展示所有已">
 <meta property="og:locale" content="Chinese, English">
+<meta property="og:updated_time" content="2019-03-28T02:16:18.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刘佳勋的博客">
-<meta name="twitter:description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
+<meta name="twitter:description" content="编写目的homebrew是macOS缺失的软件包的管理器，是一款自由及及开放源代码的软件包管理系统，用以简化macOS系统上的软件安装过程。 安装1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 基本命令 list 列表展示所有已">
   
     <link rel="alternative" href="/atom.xml" title="刘佳勋的博客" type="application/atom+xml">
   
@@ -154,43 +155,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-[homebrew] 学习指南" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p><a href="https://zh.wikipedia.org/wiki/Homebrew" target="_blank" rel="noopener">homebrew</a>是<strong>macOS</strong>缺失的软件包的管理器，是一款自由及及开放源代码的软件包管理系统，用以简化macOS系统上的软件安装过程。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><ol>
+<li><p>list 列表展示所有已经安装的软件包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>info 查询具体软件包信息，例如依赖关系当前版本注意事项等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info xxx(需要查询的软件包名称)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>search 根据名称搜索软件包信息，使用<code>@</code>可以指定版本号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search mysql</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>查询指定版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search mysql@5.7</span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li><p>update 更新brew至最新版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>outdated 检测所安装的软件是否有最新版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew outdated</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>install 安装软件包，<code>@</code>可以指定版本号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>upgrade 升级软件，若不指定名称则升级所有软件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrage xxx(具体需要升级的软件包)</span><br></pre></td></tr></table></figure></p>
+<ol start="8">
+<li><p>uninstall 删除不需要的软件包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall xxx(具体需要删除的软件包)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cleanup 清理不需要的版本及其安装缓存，因为brew不会自动移除旧版本的软件包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cleanup</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="创建自己的软件包"><a href="#创建自己的软件包" class="headerlink" title="创建自己的软件包"></a>创建自己的软件包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew create xxx(需要创建的软件压缩包)</span><br></pre></td></tr></table></figure>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/[homebrew] 学习指南/" class="archive-article-date">
-  	<time datetime="2019-03-28T02:16:18.363Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/27/[homebrew] 学习指南/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -213,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
