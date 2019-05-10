@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://liujiaxun2008.github.io">
-  <title>刘佳勋的博客</title>
+  <title>UTC时间、GMT时间、本地时间、Unix时间戳 | 刘佳勋的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
-<meta name="keywords" content="Java,Golang,Spring boot,Spring cloud,Linux,Docker,Mysql,Developer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘佳勋的博客">
-<meta property="og:url" content="https://liujiaxun2008.github.io/index.html">
+  <meta name="description" content="GMT和UTCGMT，即格林尼治标准时间，也就是世界时。GMT的正午是指当太阳横穿格林尼治子午线（本初子午线）时的时间。但由于地球自转不均匀不规则，导致GMT不精确，现在已经不再作为世界标准时间使用。 UTC，即协调世界时。UTC是以原子时秒长为基础，在时刻上尽量接近于GMT的一种时间计量系统。为确保UTC与GMT相差不会超过0.9秒，在有需要的情况下会在UTC内加上正或负闰秒。UTC现在作为世界">
+<meta name="keywords" content="timestamp,GMT,UTC,Unix timestamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UTC时间、GMT时间、本地时间、Unix时间戳">
+<meta property="og:url" content="https://liujiaxun2008.github.io/2019/05/10/timestamp/index.html">
 <meta property="og:site_name" content="刘佳勋的博客">
-<meta property="og:description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
+<meta property="og:description" content="GMT和UTCGMT，即格林尼治标准时间，也就是世界时。GMT的正午是指当太阳横穿格林尼治子午线（本初子午线）时的时间。但由于地球自转不均匀不规则，导致GMT不精确，现在已经不再作为世界标准时间使用。 UTC，即协调世界时。UTC是以原子时秒长为基础，在时刻上尽量接近于GMT的一种时间计量系统。为确保UTC与GMT相差不会超过0.9秒，在有需要的情况下会在UTC内加上正或负闰秒。UTC现在作为世界">
 <meta property="og:locale" content="Chinese, English">
+<meta property="og:updated_time" content="2019-05-10T17:18:06.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘佳勋的博客">
-<meta name="twitter:description" content="大连理工大学12级，Tron工程师。擅长于Java，Go语言开发。">
+<meta name="twitter:title" content="UTC时间、GMT时间、本地时间、Unix时间戳">
+<meta name="twitter:description" content="GMT和UTCGMT，即格林尼治标准时间，也就是世界时。GMT的正午是指当太阳横穿格林尼治子午线（本初子午线）时的时间。但由于地球自转不均匀不规则，导致GMT不精确，现在已经不再作为世界标准时间使用。 UTC，即协调世界时。UTC是以原子时秒长为基础，在时刻上尽量接近于GMT的一种时间计量系统。为确保UTC与GMT相差不会超过0.9秒，在有需要的情况下会在UTC内加上正或负闰秒。UTC现在作为世界">
   
     <link rel="alternative" href="/atom.xml" title="刘佳勋的博客" type="application/atom+xml">
   
@@ -152,16 +153,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-timestamp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-timestamp" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/10/timestamp/">UTC时间、GMT时间、本地时间、Unix时间戳</a>
+    <h1 class="article-title" itemprop="name">
+      UTC时间、GMT时间、本地时间、Unix时间戳
     </h1>
   
 
@@ -178,9 +177,207 @@
 <p><a href="http://baike.baidu.com/link?url=WuopdxowYjyGEkfBMX2QFm5kbOBdSo-gvISUJ4Q23HZ3bbYQkWhoJH4FQZhZmN59w2J3lQUY0y6s5GjpdxraAa" target="_blank" rel="noopener">UTC</a>，即协调世界时。UTC是以原子时秒长为基础，在时刻上尽量接近于GMT的一种时间计量系统。为确保UTC与GMT相差不会超过0.9秒，在有需要的情况下会在UTC内加上正或负闰秒。UTC现在作为世界标准时间使用。</p>
 <p>所以，UTC与GMT基本上等同，误差不超过0.9秒。</p>
 <p>时间戳参考地址 <a href="https://www.epochconverter.com/" target="_blank" rel="noopener">timestamp</a></p>
-        
+<a id="more"></a>
+<h2 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h2><p>地球自西向东旋转，东边比西边先看到太阳，东边的时间也比西边的早。为了统一世界的时间，1884年的国际经度会议规规定将全球划分为24个<a href="http://baike.baidu.com/link?url=xSAbnav5DTWqenBEcapIMazIz-b7AZh9_3JKW_ZVqEaVMTkkuKM2LwnANOqgg8gBxCdGrNjsYV0p5Uuqjit84q" target="_blank" rel="noopener">时区</a>（东、西各12个时区）。规定英国（格林尼治天文台旧址）为零时区（GMT+00），东1-12区，西1-12区，中国北京处于东8区（GMT+08）。</p>
+<p>若英国时间为6点整，则GMT时间为6点整，则北京时间为14点整。</p>
+<h2 id="UNIX时间戳"><a href="#UNIX时间戳" class="headerlink" title="UNIX时间戳"></a>UNIX时间戳</h2><p>计算机中的<a href="http://baike.baidu.com/view/821460.htm" target="_blank" rel="noopener">UNIX时间戳</a>，是以GMT/UTC时间「1970-01-01T00:00:00」为起点，到具体时间的秒数，不考虑闰秒。这么做当然是为了简化计算机对时间操作的复杂度。</p>
+<p>比如我的电脑现在的系统时间为2015年2月27日15点43分0秒，因为我的电脑默认时区为东8区，则0时区的时间为2015年2月27日7点43分0秒，则UNIX时间戳为1425022980秒。</p>
+<h2 id="如何在不同编程语言中获取现在的Unix时间戳-Unix-timestamp-？"><a href="#如何在不同编程语言中获取现在的Unix时间戳-Unix-timestamp-？" class="headerlink" title="如何在不同编程语言中获取现在的Unix时间戳(Unix timestamp)？"></a>如何在不同编程语言中获取现在的Unix时间戳(Unix timestamp)？</h2><table>
+<thead>
+<tr>
+<th>Java</th>
+<th>time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JavaScript</td>
+<td>Math.round(new Date().getTime()/1000) getTime()返回数值的单位是毫秒</td>
+</tr>
+<tr>
+<td>Microsoft .NET / C#</td>
+<td>epoch = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>SELECT unix_timestamp(now())</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>time</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>time()</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>SELECT extract(epoch FROM now())</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>先 import time 然后 time.time()</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>获取Unix时间戳：Time.now 或 Time.new 显示Unix时间戳：Time.now.to_i</td>
+</tr>
+<tr>
+<td>SQL Server</td>
+<td>SELECT DATEDIFF(s, ‘1970-01-01 00:00:00’, GETUTCDATE())</td>
+</tr>
+<tr>
+<td>Unix / Linux</td>
+<td>date +%s</td>
+</tr>
+<tr>
+<td>VBScript / ASP</td>
+<td>DateDiff(“s”, “01/01/1970 00:00:00”, Now())</td>
+</tr>
+<tr>
+<td>其他操作系统 (如果Perl被安装在系统中)</td>
+<td>命令行状态：perl -e “print time”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="如何在不同编程语言中实现Unix时间戳-Unix-timestamp-→-普通时间？"><a href="#如何在不同编程语言中实现Unix时间戳-Unix-timestamp-→-普通时间？" class="headerlink" title="如何在不同编程语言中实现Unix时间戳(Unix timestamp) → 普通时间？"></a>如何在不同编程语言中实现Unix时间戳(Unix timestamp) → 普通时间？</h2><table>
+<thead>
+<tr>
+<th>Java</th>
+<th>String date = new java.text.SimpleDateFormat(“dd/MM/yyyy HH:mm:ss”).format(new java.util.Date(Unix timestamp * 1000))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JavaScript</td>
+<td>先 var unixTimestamp = new Date(Unix timestamp * 1000) 然后 commonTime = unixTimestamp.toLocaleString()</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>date -d @Unix timestamp</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>from_unixtime(Unix timestamp)</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>先 my $time = Unix timestamp 然后 my ($sec, $min, $hour, $day, $month, $year) = (localtime($time))[0,1,2,3,4,5,6]</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>date(‘r’, Unix timestamp)</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>SELECT TIMESTAMP WITH TIME ZONE ‘epoch’ + Unix timestamp) * INTERVAL ‘1 second’;</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>先 import time 然后 time.gmtime(Unix timestamp)</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>Time.at(Unix timestamp)</td>
+</tr>
+<tr>
+<td>SQL Server</td>
+<td>DATEADD(s, Unix timestamp, ‘1970-01-01 00:00:00’)</td>
+</tr>
+<tr>
+<td>VBScript / ASP</td>
+<td>DateAdd(“s”, Unix timestamp, “01/01/1970 00:00:00”)</td>
+</tr>
+<tr>
+<td>其他操作系统 (如果Perl被安装在系统中)</td>
+<td>命令行状态：perl -e “print scalar(localtime(Unix timestamp))”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="如何在不同编程语言中实现普通时间-→-Unix时间戳-Unix-timestamp-？"><a href="#如何在不同编程语言中实现普通时间-→-Unix时间戳-Unix-timestamp-？" class="headerlink" title="如何在不同编程语言中实现普通时间 → Unix时间戳(Unix timestamp)？"></a>如何在不同编程语言中实现普通时间 → Unix时间戳(Unix timestamp)？</h2><table>
+<thead>
+<tr>
+<th>Java</th>
+<th>long epoch = new java.text.SimpleDateFormat(“dd/MM/yyyy HH:mm:ss”).parse(“01/01/1970 01:00:00”);</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JavaScript</td>
+<td>var commonTime = new Date(Date.UTC(year, month - 1, day, hour, minute, second))</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>SELECT unix_timestamp(time) 时间格式: YYYY-MM-DD HH:MM:SS 或 YYMMDD 或 YYYYMMDD</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>先 use Time::Local 然后 my $time = timelocal($sec, $min, $hour, $day, $month, $year);</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>mktime(hour, minute, second, month, day, year)</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>SELECT extract(epoch FROM date(‘YYYY-MM-DD HH:MM:SS’));</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>先 import time 然后 int(time.mktime(time.strptime(‘YYYY-MM-DD HH:MM:SS’, ‘%Y-%m-%d %H:%M:%S’)))</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>Time.local(year, month, day, hour, minute, second)</td>
+</tr>
+<tr>
+<td>SQL Server</td>
+<td>SELECT DATEDIFF(s, ‘1970-01-01 00:00:00’, time)</td>
+</tr>
+<tr>
+<td>Unix / Linux</td>
+<td>date +%s -d”Jan 1, 1970 00:00:01”</td>
+</tr>
+<tr>
+<td>VBScript / ASP</td>
+<td>DateDiff(“s”, “01/01/1970 00:00:00”, time)</td>
+</tr>
+</tbody>
+</table>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -212,16 +409,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/10/timestamp/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://liujiaxun2008.github.io/2019/05/10/timestamp/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/23/Git合并多个commit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git rebase 合并多个commit</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -236,169 +492,80 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Git合并多个commit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/23/Git合并多个commit/">Git rebase 合并多个commit</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/23/Git合并多个commit/" class="archive-article-date">
-  	<time datetime="2019-04-23T23:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>rebase在git中是一个非常有魅力的命令，使用得当会极大提高自己的工作效率；相反，如果乱用，会给团队中其他人带来麻烦。它的作用简要概括为：可以对某一段线性提交历史进行编辑、删除、复制、粘贴；因此，合理使用rebase命令可以使我们的提交历史干净、简洁！</li>
-</ul>
-<h3 id="合并多个commit为一个完整commit"><a href="#合并多个commit为一个完整commit" class="headerlink" title="合并多个commit为一个完整commit"></a>合并多个commit为一个完整commit</h3><p>当我们在本地仓库中提交了多次，在我们把本地提交push到公共仓库中之前，为了让提交记录更简洁明了，我们希望把如下分支B、C、D三个提交记录合并为一个完整的提交，然后再push到公共仓库。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">rebase</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/23/Git合并多个commit/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GMT和UTC"><span class="toc-number">1.</span> <span class="toc-text">GMT和UTC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时区"><span class="toc-number">2.</span> <span class="toc-text">时区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UNIX时间戳"><span class="toc-number">3.</span> <span class="toc-text">UNIX时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在不同编程语言中获取现在的Unix时间戳-Unix-timestamp-？"><span class="toc-number">4.</span> <span class="toc-text">如何在不同编程语言中获取现在的Unix时间戳(Unix timestamp)？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在不同编程语言中实现Unix时间戳-Unix-timestamp-→-普通时间？"><span class="toc-number">5.</span> <span class="toc-text">如何在不同编程语言中实现Unix时间戳(Unix timestamp) → 普通时间？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在不同编程语言中实现普通时间-→-Unix时间戳-Unix-timestamp-？"><span class="toc-number">6.</span> <span class="toc-text">如何在不同编程语言中实现普通时间 → Unix时间戳(Unix timestamp)？</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="timestamp" data-title="UTC时间、GMT时间、本地时间、Unix时间戳" data-url="https://liujiaxun2008.github.io/2019/05/10/timestamp/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-homebrew" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/27/homebrew/">homebrew 学习指南</a>
-    </h1>
   
-
-        
-        <a href="/2019/03/27/homebrew/" class="archive-article-date">
-  	<time datetime="2019-03-28T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="编写目的"><a href="#编写目的" class="headerlink" title="编写目的"></a>编写目的</h2><p><a href="https://zh.wikipedia.org/wiki/Homebrew" target="_blank" rel="noopener">homebrew</a>是<strong>macOS</strong>缺失的软件包的管理器，是一款自由及及开放源代码的软件包管理系统，用以简化macOS系统上的软件安装过程。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/27/homebrew/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://liujiaxun2008.github.io/2019/05/10/timestamp/", 
+    sourceId: "timestamp",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
 
   
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Fri May 10 2019 10:16:12 GMT-0700",
+  owner: 'liujiaxun2008',
+  repo: 'liujiaxun2008.github.io',
+  oauth: {
+    client_id: 'ce1cae05401b2a8bc4b2',
+    client_secret: 'a875569978809a15cd34797b7e23405d084f69c0',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
   
 
 
@@ -422,8 +589,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
